@@ -79,14 +79,31 @@ Base API URL:
 
 `https://umk87rmx76.execute-api.us-east-1.amazonaws.com/api`
 
+---
+
 ### `/`
 
 Returns general information about the project, including a short description of the API and the available resources.
 
-Example response:
+---
 
-```json
-{
-  "about": "Tracks recent and historical earthquakes using the USGS Earthquake API.",
-  "resources": ["current", "trend", "plot"]
-}
+### `/current`
+
+Returns information about the latest earthquake activity sample from the USGS past-hour earthquake feed. The response includes the number of detected earthquakes and the strongest recent earthquake event.
+
+---
+
+### `/trend`
+
+Returns a summary of recent earthquake trends using stored historical hourly samples. The response includes the average hourly earthquake count and the strongest earthquake recorded in the recent sampling window.
+  
+---
+
+### `/plot`
+
+Returns a public S3 URL to a PNG visualization of global earthquake activity.
+
+The visualization displays:
+- earthquake locations around the world
+- bubble size scaled by earthquake magnitude
+- historical earthquake activity from the last 2 years
