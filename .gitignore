@@ -4,3 +4,4 @@ __pycache__/
 .chalice/deployments/
 .DS_Store
 latest.png
+earthquake-api/app_old.py
