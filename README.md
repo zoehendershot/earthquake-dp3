@@ -71,6 +71,8 @@ Example item:
   "depth_km": 22.4
 }
 
+```
+
 ## API Resources
 
 Base API URL:
